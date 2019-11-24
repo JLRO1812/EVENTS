@@ -32,8 +32,8 @@ public class Auditorium {
 	}
 	/**
 	 * This method allows you to create the chairs
-	 * @param n 
-	 * @return 
+	 * @param n is a integer
+	 * @return create chair
 	 */
 	public Chair[][] createChairs(int [] n){
 		int bigNumber = 0;
@@ -61,7 +61,7 @@ public class Auditorium {
 	}
 	/**
 	 * This method allows you to access a file and assign it a letter
-	 * @param f
+	 * @param f is a string
 	 * @return file with letter 
 	 */
 	public int getFile(String f) {
@@ -76,7 +76,7 @@ public class Auditorium {
 	}
 	/**
 	 * This method shows the rows with their respective letter
-	 * @param f
+	 * @param f is a string
 	 * @return file and letter
 	 */
 	public String getFile(int f) {
@@ -87,8 +87,8 @@ public class Auditorium {
 	}
 	/**
 	 * This method allows you to search for a chair according to its position
-	 * @param f
-	 * @param c
+	 * @param f is a string
+	 * @param c is a integer
 	 * @return chair position
 	 */
 	public Chair searchChair(String f, int c) {
@@ -104,9 +104,9 @@ public class Auditorium {
 	}
 	/**
 	 * This method verifies the position of a chair
-	 * @param available
-	 * @param f
-	 * @param c
+	 * @param available is a boolean
+	 * @param f is a string
+	 * @param c is a integer
 	 */
 	public void setAvailableChair(boolean available, String f, int c) {
 		int file = getFile(f);
@@ -114,10 +114,10 @@ public class Auditorium {
 	}
 	/**
 	 * This method verifies the defective state of the chair
-	 * @param defective
-	 * @param description
-	 * @param f
-	 * @param c
+	 * @param defective is a boolean
+	 * @param description is a string
+	 * @param f is a string
+	 * @param c is a integer
 	 */
 	public void setDefectiveChair(boolean defective, String description, String f, int c) {
 		int file = getFile(f);
@@ -126,7 +126,7 @@ public class Auditorium {
 	}
 	/**
 	 * This method allows you to search for a reservation according to the name of the event
-	 * @param nameEvent
+	 * @param nameEvent is a string
 	 * @return Reservation according to the event
 	 */
 	public Reservation searchReservation(String nameEvent) {
@@ -142,9 +142,9 @@ public class Auditorium {
 		return obj;
 	}
 	/**
-	 * 
-	 * @param nameEvent
-	 * @return
+	 * This event allows you to find the position of a reservation
+	 * @param nameEvent is a string
+	 * @return reserve position
 	 */
 	public int searchPositionReservation(String nameEvent) {
 		boolean found = false;
@@ -160,7 +160,7 @@ public class Auditorium {
 	}
 	/**
 	 * This method allows you to delete a reservation
-	 * @param nameEvent
+	 * @param nameEvent is a String
 	 */
 	public void eraseReservation(String nameEvent) {
 		int n = searchPositionReservation(nameEvent);
@@ -168,9 +168,9 @@ public class Auditorium {
 	}
 	/**
 	 * This method allows to verify if a reservation crosses
-	 * @param date
-	 * @param startTime
-	 * @param finishTime
+	 * @param date is a localDate
+	 * @param startTime is a integer
+	 * @param finishTime is a integer
 	 * @return Validity on whether reservations are crossed
 	 */
 	public boolean searchCrossReservation(LocalDate date, int startTime, int finishTime) {
@@ -195,10 +195,10 @@ public class Auditorium {
 	}
 	/**
 	 * This method allows you to add a reservation
-	 * @param nameEvent
-	 * @param date
-	 * @param startTime
-	 * @param finishTime
+	 * @param nameEvent string
+	 * @param date localDate
+	 * @param startTime integer
+	 * @param finishTime integer
 	 * @return Reservation made
 	 */
 	public boolean addReservation(String nameEvent, LocalDate date, int startTime, int finishTime) {

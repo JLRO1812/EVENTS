@@ -17,7 +17,7 @@ public class University {
 	}
 	/**
 	 * This method allows you to search for an event by name
-	 * @param name
+	 * @param name is a string
 	 * @return Show the event according to the given name
 	 */
 	public Event searchEvent(String name) {
@@ -34,7 +34,7 @@ public class University {
 	}
 	/**
 	 * This method allows you to find the position of an event by name
-	 * @param name
+	 * @param name is a string
 	 * @return Give the position of the given event
 	 */
 	public int searchPositionEvent(String name) {
@@ -51,15 +51,15 @@ public class University {
 	}
 	/**
 	 * This method allows you to enter the number of people who will attend the event
-	 * @param amount
-	 * @param nameEvent
+	 * @param amount is a integer
+	 * @param nameEvent is a string
 	 */
 	public void setAssistedPeople(int amount, String nameEvent) {
 		events.get(searchPositionEvent(nameEvent)).setAssistedPeople(amount);
 	}
 	/**
 	 * This method allows you to search for an auditorium by name
-	 * @param name
+	 * @param name is a string
 	 * @return The auditorium entered
 	 */
 	public Auditorium searchAuditorium(String name) {
@@ -76,7 +76,7 @@ public class University {
 	}
 	/**
 	 * This method allows to find the position of an auditorium according to its name
-	 * @param name
+	 * @param name is a string
 	 * @return The position of the auditorium entered
 	 */
 	public int searchPositionAuditorium(String name) {
@@ -93,8 +93,8 @@ public class University {
 	}
 	/**
 	 * This method allows to verify if an auditorium is available according to its name
-	 * @param available
-	 * @param name
+	 * @param available is a boolean
+	 * @param name is a string
 	 * @return Validate the availability of the auditorium entered
 	 */
 	public boolean setAvailableAuditorium(boolean available, String name) {
@@ -110,7 +110,7 @@ public class University {
 	}
 	/**
 	 * This method allows to verify if a chair in an auditorium is available according to its name
-	 * @param nameAuditorium
+	 * @param nameAuditorium is a string
 	 * @return Validate the availability of the chair in the auditorium entered
 	 */
 	public boolean setAvailableChair(String nameAuditorium) {
@@ -136,11 +136,11 @@ public class University {
 	}
 	/**
 	 * This method allows entry of defective chairs
-	 * @param nameAuditorium
-	 * @param defective
-	 * @param description
-	 * @param f
-	 * @param c
+	 * @param nameAuditorium is a string
+	 * @param defective is a boolean
+	 * @param description is a string
+	 * @param f is a string
+	 * @param c is a integer
 	 * @return Validate defective chairs
 	 */
 	public boolean setDefectiveChair(String nameAuditorium, boolean defective, String description, String f, int c) {
@@ -160,9 +160,9 @@ public class University {
 	}
 	/**
 	 * This method allows you to search for a chair according to the name of the auditorium
-	 * @param nameAuditorium
-	 * @param f
-	 * @param c
+	 * @param nameAuditorium is a string
+	 * @param f is a string
+	 * @param c is a integer
 	 * @return Chair result
 	 */
 	public Chair searchChair(String nameAuditorium, String f, int c) {
@@ -177,8 +177,8 @@ public class University {
 	}
 	/**
 	 * This method allows you to search for a reservation according to the name of the event and the name of the auditorium
-	 * @param nameAuditorium
-	 * @param nameEvent
+	 * @param nameAuditorium is a string
+	 * @param nameEvent is a string
 	 * @return Result of the reservation
 	 */
 	public Reservation searchReservation(String nameAuditorium, String nameEvent) {
@@ -199,10 +199,10 @@ public class University {
 	}
 	/**
 	 * This method allows you to add a reservation
-	 * @param nameAuditorium
-	 * @param nameEvent
-	 * @param startTime
-	 * @param finishTime
+	 * @param nameAuditorium is a string
+	 * @param nameEvent is a string
+	 * @param startTime is a integer
+	 * @param finishTime is a integer
 	 * @return The reservation has been added
 	 */
 	public boolean addReservation(String nameAuditorium, String nameEvent, int startTime, int finishTime) {
@@ -217,7 +217,7 @@ public class University {
 	}
 	/**
 	 * This method lets you know what the percentage of defective chairs according to the name of auditorium
-	 * @param nameAuditorium
+	 * @param nameAuditorium is a string
 	 * @return Percentage of defective chairs
 	 */
 	public double percentageDefectiveC(String nameAuditorium) {
@@ -252,7 +252,7 @@ public class University {
 	}
 	/**
 	 * This method allows an event to end
-	 * @param name
+	 * @param name is a string
 	 * @return number of people in the event
 	 */
 	public int finishEvent(String name) {
