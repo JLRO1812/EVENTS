@@ -27,19 +27,41 @@ public class Main {
 		int option;
 		boolean choose = false;
 		while(!choose) {
-			System.out.println("1. Auditoriums.\n2. Events.\n3. Exit.");
+			System.out.println("1. Auditoriums.\n2. Events.\n3. Add event.\n4. Exit.");
 			option = number.nextInt();
 			switch(option) {
 			case 1: auditoriumMenu(nameAuditorium());
 				break;
 			case 2: eventMenu(nameEvent());
 				break;
-			case 3: choose = true;
+			case 3: addEvent();
+				break;
+			case 4: choose = true;
 				break;
 			default:System.out.println("Not valid option"); 
 				break;
 			}
 		}
+	}
+	
+	public void addEvent() {
+		System.out.println("Write name of event");
+		String name = lector.nextLine();
+		System.out.println("Write name of reponsable teacher");
+		String nameTeacher = lector.nextLine();
+		System.out.println("Write name of responsable faculty");
+		String nameFaculty = lector.nextLine();
+		System.out.println("Write the day of event");
+		int day = number.nextInt();
+		System.out.println("Write the month");
+		int month = number.nextInt();
+		System.out.println("Write the year");
+		int year = number.nextInt();
+		System.out.println("Write the start hour");
+		int startHour = number.nextInt();
+		System.out.println("Write the finish hour");
+		int finishHour = number.nextInt();		
+		uni.addEvent(name, day, month, year, startHour, finishHour, nameTeacher, nameFaculty);
 	}
 	
 	public void auditoriumMenu(String name) {
